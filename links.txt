@@ -6,5 +6,3 @@ https://github.com/jakobsudau/AVPRG
 
 resonance audio  google programm für 3d audio. 
 
-rain sound loop ?
-https://www.youtube.com/watch?v=QgqRkXzw6JM
