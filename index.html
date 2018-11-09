@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
     <head>
-	<title> </title>
+	<title>Visual-Soundilizer</title>
 	<link rel="stylesheet" type="text/css" href=stylesheet.css>
 	<meta charset= "utf-8">
 	
@@ -10,10 +10,16 @@
 		<body>
 		<h1> Test </h1>
 		<div class= "room">
+		<img src="volume.svg" id="sourceAIcon" hidden>  
+        <img src="person.svg" id="listenerIcon" hidden>
+		<canvas id="canvas"></canvas>
+		
 		<script src="audio3d.js"></script>
-		<script src="https://cdn.jsdelivr.net/npm/resonance-audio/build/resonance-audio.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/resonance-audio/build/resonance-audio.min.js"></script>		<!-- 	-->
         <script src="canvasControl.js"></script>
 		 </div>
+		 
+		 
 		 <div class= "button">
 		<button id="play" ">Play</button>
 		 </div>
