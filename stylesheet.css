@@ -5,7 +5,11 @@ body {
 	
 }
 
-.placeholder {
-	
+.Play {
+	 background: url("Pictures/play.png") no-repeat scroll 0 0 transparent;
+    border: none;
+    padding: 15px 32px;
+    text-decoration: none;
+    display: inline-block;
 	
 }
