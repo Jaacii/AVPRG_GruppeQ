@@ -6,7 +6,7 @@
 	<meta charset= "utf-8">
 	
 	</head>
-	
+	<!-- Page Elements	-->
 		<body>
 		<h1> Test </h1>
 		<!-- Room for 3D Audio	-->
@@ -35,12 +35,31 @@
 		 
 		 </div>
 		 
+	<!-- Skript	-->	 
+		 <script>
 		 
+		 
+		let audioContext = new AudioContext();
+		let resonanceAudioScene(audioContext);
+		resonanceAudioScene.output.connect (audioContext.destination);
 		
+		let audioElement = document.createElement('audio');
+		audioElement.src = 'Audiosamples/StockAudio.mp3';
+		audioElement.loop =true;
 		
+		let audioElementSource = audioContext.createMediaElementSource (audioElement);
+		
+		let source = resonanceAudioScene.createSource();
+		audioElementSource.connect(source.input);
+		source.setPosition(0,0,0);
+		source.setMaxDistance(3);
+		
+		 audioElement.play();
 		 
 		 
+		 resonanceAudioScene.setListenerPosition(0,0,0);
 		 
+		 </script>
 		 
 		 
 		</body>
