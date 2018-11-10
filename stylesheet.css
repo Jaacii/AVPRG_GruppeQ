@@ -1,37 +1,92 @@
 /*css*/
 
 body {
-	background-color: Lavender;
+	background-color: #83677B;
 	
 }
 
+/*Noisemaker*/
+.Noisemaker {
+	margin-right: 10px;
+	margin-left : ;
+	border: 3px gray68;
+	float: left;
+	width: 330px;
+	height: 230px;				/*höhe */
+			
+	display:  inline-block;		/*positioniert sich nebeneinander wenn möglich */
+	background-color: #501B1D;
+	text-align: center;
+	
+}
+
+
+/*PlayButton*/
 .button {
+	float: both;
+	width: 120px;
+	height: 80px;
+	margin-left: 820px;  /*Die Anordnung zur Mitte geht auch anders und genauer. Sollte später noichmal geändert werden*/
+	margin-right: 820px;
+	margin-top: 30px;	
+	font-size:24px;
 	background-image: url("Pictures/play.png") ;
 	background-repeat: no-repeat;
-    border: none;
-    padding: 15px 32px;
-    text-decoration: none;
-    display: inline-block;
-	
 }
 
-.Noisemaker {
-	width: 16%;					/*breite */
-	height: 16%%;				/*höhe */
-	position: fixed;			/*absolute, static, fixed etc */
+
+
+/*3DAudio*/
+.room {
+	display:  inline-block;	
+	background: #64485C;
+	height: 100%;
+	width: 16%;	
+	float: both;
+	margin-left: 730px;  /*Die Anordnung zur Mitte geht auch anders und genauer. Sollte später noichmal geändert werden*/
+	margin-top: 30px;	
+}
+
+
+
+/*Equalizer*/
+.Equalizer {
 	display:  inline-block;		/*positioniert sich nebeneinander wenn möglich */
-	background-color: MediumVioletRed ;
+	/*background-color: Blue ;*/
+	float: both;
+	width: 90%;
+	height: 460px;
 	text-align: center;
 }
 
-.Equalizer {
-	
+.slider {
+	text-align: center;
+    -webkit-appearance: none;
+    width: 100%;
+    height: 15px;
+    border-radius: 5px;  
+    background: #ADADAD;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
 	
 }
 
-.room {
-	display:  inline-block;	
-	position: fixed;
-	height: 100%;
-	width: 16%;	
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%; 
+    background: #2E1114;
+    cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #2E1114;
+    cursor: pointer;
 }

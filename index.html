@@ -8,36 +8,76 @@
 	</head>
 	<!-- Page Elements	-->
 		<body>
-		<h1> Test </h1>
 		
 		<!-- Noisemaker	-->
-		 <div class="Noisemaker">
-		 
+		<div>
+			<div>
+				<button class="Noisemaker"type="button">Pick noise</button> 
+			</div>
+		<!--  -->
+			<div>
+				<button class="Noisemaker" type="button">Pick noise</button> 
+			</div>
+		 <!--  -->
+			<div>
+				<button class="Noisemaker" type="button">Pick noise</button> 
+			</div>
+		 <!--  -->
+			<div>
+				<button class="Noisemaker" type="button">Add noise</button>  
+			</div>
 		 </div>
+		 
+		 
+		 
+		  <!-- Playbutton	-->
+		 <button id="playbtn" class="button"> Play </button>
+		 
+		 
+		 <!-- Room for 3D Audio		-->
+		 <div class= "room">
+			<img src="volume.svg" id="sourceAIcon" hidden>  
+			<img src="person.svg" id="listenerIcon" hidden>
+				<canvas id="canvas"></canvas>
 		
-		<!-- Room for 3D Audio	-->
-		<div class= "room">
-		<img src="volume.svg" id="sourceAIcon" hidden>  
-        <img src="person.svg" id="listenerIcon" hidden>
-		<canvas id="canvas"></canvas>
+				<script src="audio3d.js"></script>
+				<script src="https://cdn.jsdelivr.net/npm/resonance-audio/build/resonance-audio.min.js"></script>		<!-- google resonance audio sdk	-->
+				<script src="canvasControl.js"></script>
+		 </div>	
+		 
+		 
+		 <h1> Equalizer </h1>
+		 
+			
+		 
 		
-		<script src="audio3d.js"></script>
-		<script src="https://cdn.jsdelivr.net/npm/resonance-audio/build/resonance-audio.min.js"></script>		<!-- google resonance audio sdk	-->
-        <script src="canvasControl.js"></script>
-		 </div>
-		 
-		 <!-- Playbutton	-->
-		 <div class="button">
-		 
-		 </div>
 		 
 
 		 <!-- Equalizer	-->
 		 <div class="Equalizer">
 		 
+			 
+			 <div> Volume
+                <input type="range" id="sourceHeightSlider" class="slider" min="0" max="100" value="10">
+            </div>
+			<div> Gain
+                <input type="range" id="sourceHeightSlider" class="slider" min="0" max="100" value="0">
+            </div>
+			<div> Bass
+                <input type="range" id="sourceHeightSlider" class="slider" min="0" max="100" value="0">
+            </div>
+			<div> Middle
+                <input type="range" id="sourceHeightSlider" class="slider" min="0" max="100" value="0">
+            </div>
+			<div> Treble
+                <input type="range" id="sourceHeightSlider" class="slider" min="0" max="100" value="0">
+            </div>
+			<div> Reverb
+                <input type="range" id="sourceHeightSlider" class="slider" min="0" max="100" value="0">
+            </div>
 		 </div>
 		 
-	<!-- Skript	-->	 
+	<!-- Skript	 Versuch, funktioniert noch nicht-->	 
 		 <script>
 		 
 		 
