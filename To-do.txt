@@ -10,6 +10,8 @@ Evtl textfeld nach den Slidern um den Slider auf eine bestimmte Position setzen 
 Funktionen:
 Alles
 
+Evtl Audio im Audio Ordner Ansprechen. Beim Implementieren hatte es für Fehler gesorgt
+
 
 
 Evtl Umbearbeitung des 3D Rooms
