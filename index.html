@@ -168,24 +168,53 @@
 		 
 			 
 			 <div> Volume
-                <input type="range" id="sourceHeightSlider" class="slider" min="0" max="100" value="10">
+                <input type="range" id="volumeslider" class="slider" min="0" max="100" value="50">
+				 <span id="volumeOutput" class="output">0 dB</span>
             </div>
 			<div> Gain
-                <input type="range" id="sourceHeightSlider" class="slider" min="0" max="100" value="0">
+                <input type="range" id="gainslider" class="slider" min="-50" max="50" value="0">
+				 <span id="gainOutput" class="output">0 dB</span>
             </div>
 			<div> Bass
-                <input type="range" id="sourceHeightSlider" class="slider" min="0" max="100" value="0">
+                <input type="range" id="seekslider" class="slider" min="0" max="100" value="0">
+				 <span id="bassOutput" class="output">0 dB</span>
             </div>
 			<div> Middle
-                <input type="range" id="sourceHeightSlider" class="slider" min="0" max="100" value="0">
+                <input type="range" id="delaySlider" class="slider" min="0" max="100" value="0">
+				 <span id="middleOutput" class="output">0 dB</span>
             </div>
 			<div> Treble
-                <input type="range" id="sourceHeightSlider" class="slider" min="0" max="100" value="0">
+                <input type="range" id="trebleslider" class="slider" min="0" max="100" value="0">
+				 <span id="trebleOutput" class="output">0 dB</span>
             </div>
 			<div> Reverb
-                <input type="range" id="sourceHeightSlider" class="slider" min="0" max="100" value="0">
+                <input type="range" id="reverbslider" class="slider" min="0" max="100" value="0">
+				 <span id="reverbOutput" class="output">0 dB</span>
             </div>
 		 </div>
+		<script>
+	var  seekslider, volumeslider, seeking=false, seekto;
+	
+	
+		volumeslider = document.getElementById("volumeslider");
+		volumeslider.addEventListener("mousemove", setvolume);
+		seekslider = document.getElementById("seekslider");
+		seekslider.addEventListener("mousedown", function(event){ seeking=true; seek(event); });
+		seekslider.addEventListener("mousemove", function(event){ seek(event); });
+		seekslider.addEventListener("mouseup",function(){ seeking=false; });
+
+		//welche slider brauchen wir noch?  gain, delay...?
+
+		function seek(event){		//kommt evtl weg
+	    if(seeking){
+		    seekslider.value = event.clientX - seekslider.offsetLeft;
+	        seekto = audioElement2.duration * (seekslider.value / 100);
+	        audioElement2.currentTime = seekto;
+	    }
+    }
+		function setvolume(){
+	    audioElement2.volume = volumeslider.value / 100;
+		}
 			
 		
 		 
