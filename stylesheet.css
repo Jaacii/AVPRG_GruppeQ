@@ -5,6 +5,26 @@ body {
 	
 }
 
+
+
+
+
+.MoveY {
+	width: 150px;
+	height: 150px;	
+	margin-right: 154px;
+	margin-left:154px;
+	
+	
+}
+.MoveX {
+	width: 150px;
+	height: 150px;	
+	
+	
+}
+
+
 /*Noisemaker*/
 .Noisemaker {
 	margin-right: 10px;
@@ -22,30 +42,19 @@ body {
 
 
 /*PlayButton*/
-.button {
+.playbtn {
 	float: both;
-	width: 120px;
-	height: 80px;
-	margin-left: 820px;  /*Die Anordnung zur Mitte geht auch anders und genauer. Sollte später noichmal geändert werden*/
-	margin-right: 820px;
+	width: 180px;
+	height: 180px;
+	margin-left: 800px;  /*Die Anordnung zur Mitte geht auch anders und genauer. Sollte später noichmal geändert werden*/
+	margin-right: 800px;
 	margin-top: 30px;	
 	font-size:24px;
-	background-image: url("Pictures/play.png") ;
-	background-repeat: no-repeat;
+	background: "url (Pictures/play.png)";
+	
 }
 
 
-
-/*3DAudio*/
-.room {
-	display:  inline-block;	
-	background: #64485C;
-	height: 100%;
-	width: 16%;	
-	float: both;
-	margin-left: 730px;  /*Die Anordnung zur Mitte geht auch anders und genauer. Sollte später noichmal geändert werden*/
-	margin-top: 30px;	
-}
 
 
 
