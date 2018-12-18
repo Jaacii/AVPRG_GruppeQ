@@ -32,13 +32,29 @@ body {
 	width: 160px;
 	height: 115px;				/*höhe */
 	margin-top: 18px;
-	margin-bottom: 18px;
+	
 	margin-left: 5px;	
 	margin-right: 5px;
 	display:  inline-block;		/*positioniert sich nebeneinander wenn möglich */
 	background-color: #D83F87;
 	text-align: center;
 	
+}
+
+.songarea {
+	margin-left: 1600px;
+	
+	margin-right: 10px;
+	margin-bottom: 10px;
+	background-color: #A4B3B6
+		
+}
+.Songmaker {
+	background-color: #000000;
+	color: #FFFFFF;
+	top: 100px;
+	width: 20%;
+	height: 40px;
 }
 /*------------------------*/
 
@@ -47,17 +63,51 @@ body {
 
 /*PlayButton*/
 .playbtn {
-	float: both;
+	
+
+	/*float: both;*/
+	left: 50;
+	top: 50;
 	width: 10%;
 	height: 180px;
-	margin-left: 155px;  /*Die Anordnung zur Mitte geht auch anders und genauer. Sollte später noichmal geändert werden*/
-	margin-right: 1500px;
-	margin-top: 30px;
-		
-	font-size:24px;
-	/*background: "url (Pictures/play.png)";*/
-	background-color: #A4B3B6;
+	margin-left: 155px;  
+	/*margin-right: 1500px; */
 	
+	float: left;
+	
+		
+	border: none;
+
+	
+	
+	
+}
+#playbtn {
+	background: url("Pictures/play.png") no-repeat scroll 0 0 transparent;
+}
+#pausebtn {
+	background: url("Pictures/pause.png") no-repeat scroll 0 0 transparent;
+	display:none;
+}
+#up {
+	background: url("Pictures/up.png") no-repeat scroll 0 0 transparent;
+	background-color: #A4B3B6 
+}
+#left {
+	background: url("Pictures/left.png") no-repeat scroll 0 0 transparent;
+	background-color: #A4B3B6 
+}
+#right {
+	background: url("Pictures/right.png") no-repeat scroll 0 0 transparent;
+	background-color: #A4B3B6 
+}
+#down {
+	background: url("Pictures/down.png") no-repeat scroll 0 0 transparent;
+	background-color: #A4B3B6 ;  
+}
+#central {
+	background: url("Pictures/reset.png") no-repeat scroll 0 0 transparent;
+	background-color: #A4B3B6 
 }
 
 #CoordinatesAndPlay{
@@ -83,7 +133,8 @@ body {
 	height: 460px;
 	float: left;
 	padding:10px;
-	background-color: #A67FFF  ;
+	
+	
 	overflow: hidden; 
 	margin-left: 30px;
 	padding: 20px;
@@ -96,14 +147,14 @@ body {
 	
 	margin-left:174px; 
 	margin-right: 10px;
-	background-color: #A4B3B6;
+	
 	display:  inline-block;	
 	
 }
 .MoveX {
 	width: 150px;
 	height: 150px;	
-	background-color: #A4B3B6;
+	
 	display:  inline-block;	
 	margin-left: 10px;
 	margin-top: 10px;
@@ -163,7 +214,40 @@ body {
     cursor: pointer;
 }
 /*------------------------*/
+/* MP3 Player*/
+#fileload {
+  position: fixed;
+  top: 35px;
+  left: 15px;
+  z-index: 100;
+  width: 20%;
+  
+  background-color: #A4B3B6;
+}
 
-.bars {
-	top: 100;
+#canvas {
+  position: fixed;
+  top: 30;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+audio {
+  position: fixed;
+  left: 10px;
+  bottom: 10px;
+  width: calc(100% - 20px);
+}
+
+
+
+/*------*/
+#canvasa {
+	position: fixed;
+  top: 50;
+  left: 100;
+  width: 30%;
+  height: 30%;
+ background-color: #A4B3B6;
 }
